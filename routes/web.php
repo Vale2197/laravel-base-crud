@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'GeneralController@home');
+Route::get('/', 'GeneralController@home')->name('home');
 /* / general route */
 
 

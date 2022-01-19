@@ -1,0 +1,24 @@
+.comics_index {
+
+    .container {
+        padding: 5rem 0;
+        .card {
+            color: black;
+            height: 100%;
+
+            .card-body {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            img {
+                width: 100%;
+                height: 300px;
+                object-fit: cover;
+                object-position: top;
+            }
+        }
+
+    }
+}

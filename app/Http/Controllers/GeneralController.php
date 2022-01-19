@@ -10,10 +10,7 @@ class GeneralController extends Controller
     //
 
     public function home() {
-
-        $comics = Comic::all();
-        ddd($comics);
-        
-        return view('home', compact('comics'));
+  
+        return view('home');
     }
 }
