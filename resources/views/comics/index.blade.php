@@ -5,9 +5,15 @@
     <div class="comics_index">
 
         <div class="container">
-            <h1 class="mb-4">
-                OUR COMICS:
-            </h1>
+            <div class="title mb-4 d-flex justify-content-between">
+                <h1 class="m-0">
+                    OUR COMICS:
+                </h1>
+
+                <button class="btn btn-warning fw-bold">
+                    <a href="{{route('comics.create')}}"> Add a comic! </a> 
+                </button>
+            </div>
 
             <div class="row g-4">
 

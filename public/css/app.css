@@ -11262,6 +11262,10 @@ footer {
 .comics_index .container {
   padding: 5rem 0;
 }
+.comics_index .container a {
+  text-decoration: none;
+  color: black;
+}
 .comics_index .container .card {
   color: black;
   height: 100%;
@@ -11278,6 +11282,20 @@ footer {
      object-fit: cover;
   -o-object-position: top;
      object-position: top;
+}
+.comics_index .container .card .btn {
+  color: white;
+  font-weight: bold;
+}
+
+.comics_create .container {
+  padding: 5rem 0;
+}
+.comics_create .container label {
+  margin-top: 1rem;
+}
+.comics_create .container button {
+  margin-top: 1rem;
 }
 
 .comics_show .container {

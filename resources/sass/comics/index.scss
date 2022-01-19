@@ -2,6 +2,10 @@
 
     .container {
         padding: 5rem 0;
+        a {
+            text-decoration: none;
+            color: black;
+        }
         .card {
             color: black;
             height: 100%;
@@ -17,6 +21,11 @@
                 height: 300px;
                 object-fit: cover;
                 object-position: top;
+            }
+
+            .btn {
+                color: white;
+                font-weight: bold;
             }
         }
 
