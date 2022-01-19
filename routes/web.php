@@ -13,6 +13,24 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'GeneralController@home');
+/* / general route */
+
+
+
+/* COMICS ROUTES */
+Route::get('/comics/index', 'ComicController@index')->name('comics.index');
+
+Route::get('/comic/create', 'ComicController@create')->name('comics.create');
+
+Route::post('/comic', 'ComicController@store')->name('comics.store');
+
+Route::get('/comic/show/{comic}', 'ComicController@show')->name('comics.show');
+
+Route::get('/comic/edit', 'ComicController@edit')->name('comics.edit');
+
+Route::put('/comic/update/{comic}', 'ComicController@update')->name('comics.update');
+
+Route::delete('/comic/{comic}', 'ComicController@destroy')->name('comics.destroy');
+
+
