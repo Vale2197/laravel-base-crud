@@ -11259,6 +11259,9 @@ footer {
   color: white;
 }
 
+.comics_index {
+  min-height: 100vh;
+}
 .comics_index .container {
   padding: 5rem 0;
 }
@@ -11288,6 +11291,9 @@ footer {
   font-weight: bold;
 }
 
+.comics_create {
+  min-height: 100vh;
+}
 .comics_create .container {
   padding: 5rem 0;
 }
@@ -11298,6 +11304,9 @@ footer {
   margin-top: 1rem;
 }
 
+.comics_show {
+  min-height: 100vh;
+}
 .comics_show .container {
   padding: 5rem 0;
 }
@@ -11310,6 +11319,7 @@ footer {
 
 .admin_index {
   position: relative;
+  min-height: 100vh;
 }
 .admin_index .container {
   padding: 5rem 0;
@@ -11327,6 +11337,9 @@ footer {
   font-size: 1.3rem;
   text-decoration: none;
   padding-right: 0.5rem;
+}
+.admin_index .container table td button {
+  color: white;
 }
 .admin_index .my_pagination {
   position: absolute;

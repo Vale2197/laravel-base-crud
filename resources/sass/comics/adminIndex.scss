@@ -1,5 +1,6 @@
 .admin_index {
     position: relative;
+    min-height: 100vh;
 
     .container {
         padding: 5rem 0;
@@ -17,6 +18,10 @@
                     font-size: 1.3rem;
                     text-decoration: none;
                     padding-right: 0.5rem;
+                }
+
+                button {
+                    color: white;
                 }
             }
         }

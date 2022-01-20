@@ -66,10 +66,18 @@
                             </td>
                             {{-- /price --}}
 
-                            <td>
+                            <td class="d-flex">
                                 <a href="{{route('comics.edit', $comic->id)}}"> <i class="far fa-edit"></i> </a>
                                 <a href="{{route('comics.show', $comic->id)}}"> <i class="fas fa-eye"></i> </a>
-                                <a href=""> <i class="fas fa-trash-alt"></i> </a>
+
+                                <form action="{{route('comics.destroy', $comic->id)}}" method="post">
+                                    @csrf
+                                    @method('DELETE')
+
+                                    <button type="submit" class="btn">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </button>
+                                </form>
                             </td>
                             {{-- /price --}}
     
