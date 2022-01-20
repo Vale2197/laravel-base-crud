@@ -19,6 +19,13 @@ class ComicController extends Controller
         return view('comics.index', compact('comics'));
     }
 
+    public function adminIndex() {
+
+        $comics = Comic::paginate(10);
+
+        return view('comics.admin.index', compact('comics'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -71,6 +78,9 @@ class ComicController extends Controller
     public function edit(Comic $comic)
     {
         //
+
+
+        return view('comics.admin.edit', compact('comic'));
     }
 
     /**
@@ -83,6 +93,8 @@ class ComicController extends Controller
     public function update(Request $request, Comic $comic)
     {
         //
+
+        return redirect()->route('comics.admin.index', compact('comic'));
     }
 
     /**

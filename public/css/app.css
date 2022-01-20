@@ -11308,6 +11308,49 @@ footer {
   width: 100%;
 }
 
+.admin_index {
+  position: relative;
+}
+.admin_index .container {
+  padding: 5rem 0;
+}
+.admin_index .container table {
+  table-layout: auto;
+  width: 100%;
+}
+.admin_index .container table td {
+  padding: 2rem 1rem;
+  border: 1px solid white;
+}
+.admin_index .container table td a {
+  color: white;
+  font-size: 1.3rem;
+  text-decoration: none;
+  padding-right: 0.5rem;
+}
+.admin_index .my_pagination {
+  position: absolute;
+  bottom: 0;
+  padding-left: 1rem;
+}
+.admin_index .my_pagination .page-item.active .page-link {
+  background-color: white;
+  color: black;
+}
+.admin_index .my_pagination .page-item:last-child .page-link, .admin_index .my_pagination .page-item:first-child .page-link,
+.admin_index .my_pagination a {
+  background: none;
+  border: none;
+  color: white;
+}
+
+.admin_edit {
+  min-height: 100vh;
+}
+.admin_edit .container {
+  padding: 5rem 0;
+}
+
 main {
   background-color: #353535;
   color: white;

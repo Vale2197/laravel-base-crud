@@ -1,0 +1,44 @@
+.admin_index {
+    position: relative;
+
+    .container {
+        padding: 5rem 0;
+
+        table {
+            table-layout: auto;
+            width: 100%;
+
+            td {
+                padding: 2rem 1rem;
+                border: 1px solid white;
+
+                a {
+                    color: white;
+                    font-size: 1.3rem;
+                    text-decoration: none;
+                    padding-right: 0.5rem;
+                }
+            }
+        }
+    }
+
+    .my_pagination {
+        position: absolute;
+        bottom: 0;
+        padding-left: 1rem;
+
+        .page-item.active .page-link {
+            background-color: white;
+            color: black;
+        }
+
+        .page-item:last-child .page-link, .page-item:first-child .page-link,
+            a {
+            background: none;
+            border: none;
+            color: white;
+        }
+
+
+    }
+}
