@@ -11,6 +11,7 @@
                    <a class="nav-link" href="{{route('home')}}">Home</a>
                    <a class="nav-link" href="{{route('comics.index')}}">Comics</a>
                    <a class="nav-link" href="{{route('comics.admin.index')}}">Admin</a>
+                   <a class="nav-link" href="{{route('games.index')}}">Games</a>
 
                </div>
    

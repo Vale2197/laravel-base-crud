@@ -33,5 +33,22 @@ Route::get('/comic/edit/{comic}', 'ComicController@edit')->name('comics.edit');
 Route::put('/comic/update/{comic}', 'ComicController@update')->name('comics.update');
 
 Route::delete('/comic/{comic}', 'ComicController@destroy')->name('comics.destroy');
+/* // COMICS ROUTES */
 
+
+
+/* GAMES ROUTES */
+Route::get('/games/index', 'GameController@index')->name('games.index');
+
+Route::get('/game/create', 'GameController@create')->name('games.create');
+
+Route::post('/game', 'GameController@store')->name('games.store');
+
+Route::get('/game/show/{game}', 'GameController@show')->name('games.show');
+
+Route::get('/game/edit/{game}', 'GameController@edit')->name('games.edit');
+
+Route::put('/game/update/{game}', 'GameController@update')->name('games.update');
+
+Route::delete('/game/{game}', 'GameController@destroy')->name('games.destroy');
 

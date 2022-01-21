@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Models\Game;
+
 
 class GameController extends Controller
 {
@@ -15,6 +17,11 @@ class GameController extends Controller
     public function index()
     {
         //
+        $games = DB::table('games')
+        ->orderBy('id', 'desc')
+        ->paginate('12');
+
+        return view('games.index', compact('games'));
     }
 
     /**

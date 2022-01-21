@@ -11364,6 +11364,22 @@ footer {
   padding: 5rem 0;
 }
 
+.games_index {
+  min-height: 100vh;
+}
+.games_index .container {
+  padding: 5rem 0;
+  color: black;
+}
+.games_index .container .card {
+  height: 100%;
+  transition-duration: 0.4s;
+}
+.games_index .container .card:hover {
+  transform: scale(1.03);
+  box-shadow: 3px 3px 5px black;
+}
+
 main {
   background-color: #353535;
   color: white;
