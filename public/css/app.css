@@ -11323,13 +11323,26 @@ footer {
 }
 .admin_index .container {
   padding: 5rem 0;
+  position: relative;
+}
+.admin_index .container .allertWindow {
+  visibility: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  height: 300px;
+  background-color: lightgray;
+  border-radius: 1rem;
+  color: black;
 }
 .admin_index .container table {
   table-layout: auto;
   width: 100%;
 }
 .admin_index .container table td {
-  padding: 2rem 1rem;
+  padding: 1rem 1rem;
   border: 1px solid white;
 }
 .admin_index .container table td a {
@@ -11367,9 +11380,16 @@ footer {
 .games_index {
   min-height: 100vh;
 }
+.games_index .my_pagination .pagination {
+  margin: 0;
+}
 .games_index .container {
   padding: 5rem 0;
   color: black;
+}
+.games_index .container h1, .games_index .container .h1 {
+  color: white;
+  padding: 2rem 0;
 }
 .games_index .container .card {
   height: 100%;

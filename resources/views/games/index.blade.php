@@ -7,6 +7,10 @@
     <div class="games_index">
         <div class="container">
 
+            <h1>
+                OUR GAMES:
+            </h1>
+
             <div class="row g-3">
 
                 
@@ -24,6 +28,14 @@
 
             </div>
 
+            <button class="my_btn btn btn-warning mt-3">
+                Pass to Admin view
+            </button>
+
+        </div>
+
+        <div class="my_pagination">
+            {{$games->links()}}
         </div>
     </div>
 

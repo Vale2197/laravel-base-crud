@@ -70,22 +70,51 @@
                                 <a href="{{route('comics.edit', $comic->id)}}"> <i class="far fa-edit"></i> </a>
                                 <a href="{{route('comics.show', $comic->id)}}"> <i class="fas fa-eye"></i> </a>
 
-                                <form action="{{route('comics.destroy', $comic->id)}}" method="post">
+                               {{--  <form action="{{route('comics.destroy', $comic->id)}}" method="post">
                                     @csrf
                                     @method('DELETE')
 
                                     <button type="submit" class="btn">
                                         <i class="fas fa-trash-alt"></i>
                                     </button>
-                                </form>
+                                </form> --}}
+                                <button class="deleteComic btn">
+                                    <i class="fas fa-trash-alt"></i>
+                                </button>
+
                             </td>
                             {{-- /price --}}
-    
+                            
                         </tr>
-                    @endforeach
-    
-                </tbody>
-            </table>
+                        <div class="allertWindow d-flex flex-column justify-content-center align-items-center">
+                            <p class="m-0 text-center pb-3"> 
+                                <strong> ATTENZIONE: </strong>
+                            </p> 
+                            <p class="px-4 text-center">
+                                l'articolo selezionato ( <strong> {{$comic->title}} </strong>  ), verrà rimosso pper sempre.. continuare?
+                            </p>
+                            
+                            <div class="btns">
+
+                                <form action="{{route('comics.destroy', $comic->id)}}" method="post">
+                                    @method('DELETE')
+                                    @csrf
+
+                                    <button type="submit" class="btn btn-success">
+                                        SI
+                                    </button>
+                                
+                                </form>
+
+                                <button class="btnNoComic btn btn-danger">
+                                    NO
+                                </button>
+                            </div>
+                        </div>
+                        @endforeach
+                        
+                    </tbody>
+                </table>
 
         </div>
 

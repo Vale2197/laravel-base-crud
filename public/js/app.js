@@ -19378,7 +19378,38 @@ module.exports = function(module) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+var _require = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js"),
+    forEach = _require.forEach;
+
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
+/* <button class="deleteComic btn">
+    <i class="fas fa-trash-alt"></i>
+</button>
+<div class="allertWindow">
+    
+</div> */
+
+
+var btn = document.querySelectorAll('.deleteComic');
+var alertWindow = document.querySelectorAll('.allertWindow');
+var btnNoComic = document.querySelectorAll('.btnNoComic');
+btn.forEach(function (button, indexBTN) {
+  button.addEventListener('click', function () {
+    alertWindow.forEach(function (window, indexW) {
+      if (indexBTN == indexW) {
+        window.style.visibility = 'visible';
+      } else {
+        window.style.visibility = 'hidden';
+      }
+
+      btnNoComic.forEach(function (noBtn, indexNoBtn) {
+        noBtn.addEventListener('click', function () {
+          window.style.visibility = 'hidden';
+        });
+      });
+    });
+  });
+});
 
 /***/ }),
 
