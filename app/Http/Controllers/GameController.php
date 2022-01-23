@@ -17,11 +17,18 @@ class GameController extends Controller
     public function index()
     {
         //
+        $games = Game::paginate('12');
+
+        return view('games.index', compact('games'));
+    }
+
+    public function adminIndex() {
+
         $games = DB::table('games')
         ->orderBy('id', 'desc')
         ->paginate('12');
 
-        return view('games.index', compact('games'));
+        return view('games.admin.index', compact('games'));
     }
 
     /**
@@ -54,6 +61,8 @@ class GameController extends Controller
     public function show(Game $game)
     {
         //
+
+        return view('games.admin.show', compact('game'));
     }
 
     /**
@@ -65,6 +74,8 @@ class GameController extends Controller
     public function edit(Game $game)
     {
         //
+
+        return view('games.admin.edit', compact('game'));
     }
 
     /**
@@ -77,6 +88,14 @@ class GameController extends Controller
     public function update(Request $request, Game $game)
     {
         //
+        $game->title = $request->title;
+        $game->description = $request->description;
+        $game->image = $request->image;
+
+        $game->update();
+
+        return redirect()->route('games.admin', compact('game'));
+
     }
 
     /**
@@ -88,5 +107,9 @@ class GameController extends Controller
     public function destroy(Game $game)
     {
         //
+
+        $game->delete();
+
+        return redirect()->route('games.admin');
     }
 }

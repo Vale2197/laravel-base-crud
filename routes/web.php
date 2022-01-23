@@ -40,6 +40,8 @@ Route::delete('/comic/{comic}', 'ComicController@destroy')->name('comics.destroy
 /* GAMES ROUTES */
 Route::get('/games/index', 'GameController@index')->name('games.index');
 
+Route::get('/games/admin/index', 'GameController@adminIndex')->name('games.admin');
+
 Route::get('/game/create', 'GameController@create')->name('games.create');
 
 Route::post('/game', 'GameController@store')->name('games.store');

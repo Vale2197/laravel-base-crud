@@ -1,0 +1,14 @@
+.game_show {
+    min-height: 100vh;
+    .container {
+        padding: 5rem 0;
+
+        .img {
+            width: 350px;
+           
+            img {
+                width: 100%;
+            }
+        }
+    }
+}

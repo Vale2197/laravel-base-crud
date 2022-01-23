@@ -24,12 +24,12 @@
                             </div>
                         </div>
                     </div>
-                 @endforeach
+                 @endforeach 
 
             </div>
 
             <button class="my_btn btn btn-warning mt-3">
-                Pass to Admin view
+                <a href="{{route('games.admin')}}"> Pass to Admin view </a>
             </button>
 
         </div>

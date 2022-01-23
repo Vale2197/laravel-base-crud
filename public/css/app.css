@@ -11355,16 +11355,18 @@ footer {
   color: white;
 }
 .admin_index .my_pagination {
-  position: absolute;
   bottom: 0;
   padding-left: 1rem;
 }
-.admin_index .my_pagination .page-item.active .page-link {
+.admin_index .my_pagination .pagination {
+  margin: 0;
+}
+.admin_index .my_pagination .pagination .page-item.active .page-link {
   background-color: white;
   color: black;
 }
-.admin_index .my_pagination .page-item:last-child .page-link, .admin_index .my_pagination .page-item:first-child .page-link,
-.admin_index .my_pagination a {
+.admin_index .my_pagination .pagination .page-item:last-child .page-link, .admin_index .my_pagination .pagination .page-item:first-child .page-link,
+.admin_index .my_pagination .pagination a {
   background: none;
   border: none;
   color: white;
@@ -11379,6 +11381,10 @@ footer {
 
 .games_index {
   min-height: 100vh;
+}
+.games_index a {
+  text-decoration: none;
+  color: black;
 }
 .games_index .my_pagination .pagination {
   margin: 0;
@@ -11398,6 +11404,72 @@ footer {
 .games_index .container .card:hover {
   transform: scale(1.03);
   box-shadow: 3px 3px 5px black;
+}
+
+.admin_games {
+  min-height: 100vh;
+}
+.admin_games .container {
+  padding: 5rem 0;
+}
+.admin_games .container .allertWindow {
+  visibility: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  height: 300px;
+  background-color: lightgray;
+  border-radius: 1rem;
+  color: black;
+}
+.admin_games .container table {
+  table-layout: auto;
+  width: 100%;
+}
+.admin_games .container table td {
+  padding: 1rem 1rem;
+  border: 1px solid white;
+}
+.admin_games .container table td a {
+  color: white;
+  font-size: 1.3rem;
+  text-decoration: none;
+  padding-right: 0.5rem;
+}
+.admin_games .container table td button {
+  color: white;
+}
+.admin_games .my_pagination {
+  bottom: 0;
+  padding-left: 1rem;
+}
+.admin_games .my_pagination .pagination {
+  margin: 0;
+}
+.admin_games .my_pagination .pagination .page-item.active .page-link {
+  background-color: white;
+  color: black;
+}
+.admin_games .my_pagination .pagination .page-item:last-child .page-link, .admin_games .my_pagination .pagination .page-item:first-child .page-link,
+.admin_games .my_pagination .pagination a {
+  background: none;
+  border: none;
+  color: white;
+}
+
+.game_show {
+  min-height: 100vh;
+}
+.game_show .container {
+  padding: 5rem 0;
+}
+.game_show .container .img {
+  width: 350px;
+}
+.game_show .container .img img {
+  width: 100%;
 }
 
 main {

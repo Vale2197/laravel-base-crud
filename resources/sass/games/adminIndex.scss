@@ -1,12 +1,8 @@
-.admin_index {
-    position: relative;
+.admin_games {
     min-height: 100vh;
-
-    
 
     .container {
         padding: 5rem 0;
-        position: relative;
 
         .allertWindow {
             visibility: hidden;
@@ -45,25 +41,28 @@
     }
 
     .my_pagination {
+        
         bottom: 0;
         padding-left: 1rem;
-
+        
         .pagination {
 
             margin: 0;
-                    .page-item.active .page-link {
-                        background-color: white;
-                        color: black;
-                    }
-            
-                    .page-item:last-child .page-link, .page-item:first-child .page-link,
-                        a {
-                        background: none;
-                        border: none;
-                        color: white;
-                    }
+
+            .page-item.active .page-link {
+                background-color: white;
+                color: black;
+            }
+    
+            .page-item:last-child .page-link, .page-item:first-child .page-link,
+                a {
+                background: none;
+                border: none;
+                color: white;
+            }
 
         }
+
 
 
     }
