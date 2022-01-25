@@ -6,6 +6,25 @@
 
         <div class="container">
 
+            <form action="{{route('games.admin.order')}}" method="post">
+                @csrf
+                <select name="orderBy" id="orderBy">
+
+                    <option value="desc">
+                        Order by id (desc)
+                    </option>
+
+                    <option value="asc">
+                        Order by id (asc)
+                    </option>
+
+                </select>
+
+                <button type="submit">
+                    select
+                </button>
+            </form>
+
             <table>
 
 

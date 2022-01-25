@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Game;
-
+use Symfony\Component\Console\Input\Input;
 
 class GameController extends Controller
 {
@@ -30,6 +30,8 @@ class GameController extends Controller
 
         return view('games.admin.index', compact('games'));
     }
+
+    
 
     /**
      * Show the form for creating a new resource.
@@ -111,5 +113,34 @@ class GameController extends Controller
         $game->delete();
 
         return redirect()->route('games.admin');
+    }
+
+    public function order(Request $request) {
+
+        
+
+       if($request->input('orderBy') == 'desc') {
+
+        $games = DB::table('games')
+        ->orderBy('id', 'desc')
+        ->paginate('12');
+
+
+        return view('games.admin.index', compact('games'));
+
+
+       }
+       else {
+
+         $games = DB::table('games')
+        ->orderBy('id', 'asc')
+        ->paginate('12');
+
+
+        return view('games.admin.index', compact('games'));
+
+       }
+      
+
     }
 }

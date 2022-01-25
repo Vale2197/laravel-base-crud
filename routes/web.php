@@ -42,6 +42,8 @@ Route::get('/games/index', 'GameController@index')->name('games.index');
 
 Route::get('/games/admin/index', 'GameController@adminIndex')->name('games.admin');
 
+Route::post('/games/admin/index', 'GameController@order')->name('games.admin.order');
+
 Route::get('/game/create', 'GameController@create')->name('games.create');
 
 Route::post('/game', 'GameController@store')->name('games.store');
